@@ -1,0 +1,21 @@
+IST-0.jpeg start 	          0.406864879
+IST-1.jpeg start 	          0.962574785
+IST-2.jpeg start 	          1.671367422
+IST-3.jpeg start 	          4.178836204
+IST-4.jpeg start 	          7.745556137
+IST-5.jpeg start 	          8.887258018
+IST-6.jpeg start 	         10.233147950
+IST-7.jpeg start 	         11.752813224
+IST-8.jpeg start 	         13.026119538
+IST-0.jpeg end   	         14.105463804
+IST-9.jpeg start 	         14.453068290
+IST-1.jpeg end   	         20.416242160
+IST-2.jpeg end   	         24.952102276
+IST-3.jpeg end   	         34.401538679
+IST-4.jpeg end   	         37.237319286
+IST-5.jpeg end   	         42.673172201
+IST-6.jpeg end   	         47.618332316
+IST-7.jpeg end   	         52.075035276
+IST-8.jpeg end   	         59.021588173
+IST-9.jpeg end   	         63.878732386
+total 	           63.889459885

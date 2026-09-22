@@ -10,7 +10,11 @@ Academic projects developed during my Bachelor's and Master's degree in Electric
 
 
 
-This section contains academic projects, reports and coursework developed during my Bachelor's degree.
+Projects covering programming, computer networks, concurrent systems, control, electronics, signal processing, robotics and embedded systems.
+
+
+
+Featured work includes projects in C, Python, ROS, MATLAB/Simulink, VHDL, networking and FPGA development.
 
 
 
@@ -18,21 +22,21 @@ This section contains academic projects, reports and coursework developed during
 
 
 
-This section contains projects related to Robotics, Control, Artificial Intelligence and other Master's coursework.
+Projects focused on Robotics, Control and Artificial Intelligence.
 
 
 
-\## Contents
+\## Repository Contents
 
 
 
 \- Source code
 
-\- Reports
+\- Technical reports
 
 \- Presentations
 
 \- Simulations
 
-\- Technical documentation
+\- Experimental results
 
