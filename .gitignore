@@ -1,0 +1,13 @@
+*.cache/
+*.runs/
+*.hw/
+*.ip_user_files/
+*.sim/
+.Xil/
+vivado.log
+vivado.jou
+*.log
+*.jou
+__MACOSX/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,47 @@
+
+1.Considere um processador de ciclo único com registos de inteiros e endereços com 32 bits, uma cache de dados com mapeamento direto, 2^8 B de capacidade total, linhas de 16B e estratégias de Write-back, Write allocate, tcache=20ns e tRAM=100ns
+
+	a) indicar a decomposição do endereço em tag, index e offset [1 ponto]
+TAG= 32-(8)= 24 bits
+index= 4 bits
+offset = 4 bits
+ 
+	b) Decomponha as seguintes palavras em offset, tag e index: A[10][8] e B[10][8], tendo em conta que B[0][0] está no endereço 0x7ffff7e0 e que A[0][0] está imediatamente a seguir ao último elemento da matriz B [1 ponto]
+
+B[10][8]=0x7ffffA80
+tag=7ffffAh
+index=8h
+offset=0h
+
+
+a[10][8]=0x7ffffE80
+tag=7ffffEh
+index=8h
+offset=0h
+
+	c) Considere o seguinte código em C, corra no ripes e analise o hit rate. Jus . [1 ponto]
+		int main() {
+    		register int i, j;
+    		int A[16][16];
+    		int B[16][16];
+
+    		for (i = 0; i < 16; i++) {
+        		for (j = 0; j < 16; j++) {
+           			A[i][j] = B[i][j] + 1;
+        			}
+   			 }
+
+    		return 0;
+		}
+O hit rate dá zero, quando a cache preenche uma linha com o vetor B, depois vai precisar dessa linha para escrever o valor A, como A e B tem o mesmo index, para o fazer temos que rescrever a linha da cache, dá-se um miss. Isto vai-se repetir para todos os valores.
+
+ 
+	d) Alterar o código C de forma a reduzir o miss rate. [1 ponto]
+
+Acrescentar  um vetor d entre a e b, com pelo menos 5 elementos, de forma a que os index de A e B sejam diferentes. O vetor D tem pelo menos 5 elementos, de forma a alterar o segundo bit do endereco de B.
+	
+Dica: Tendo em conta o problema, considere a inserção de um vetor extra d[] com o objetivo de mudar os acessos à cache feitos nos vetores A e B.		
+
+
+	e) variar as configurações da cache e validar qual dá origem a um melhor desempenho. Justificar teoricamente [1 pontos]
+Para um melhor desempenho, basta acrescentar uma via, assim passamos a ter um via para o vetor A e uma via para o vetor B. Desta forma, não há interferencia na cache. 
