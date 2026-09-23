@@ -1,0 +1,25 @@
+LKATestBenchExample_cgxe.obj
+m_dG2RDoTkg0Y58HEEmUsuH.obj
+LKATestBenchExample_cgxe_registry.obj
+-LC:/PROGRA~1/MATLAB/R2025b/extern/lib/win64/mingw64
+-llibmwblas
+-llibmwlapack
+
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwimterp2d.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwrgb2gray_tbb.lib"
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmx.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmex.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmat.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libfixedpoint.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libut.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwmathutil.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libemlrt.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwcgxert.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwcgxeooprt.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwslexec_simbridge.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwslccrt.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwstringutil.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libcovrt.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwsl_sfcn_cov_bridge.lib" 
+"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64\libmwdsp_halidesim.lib"
+

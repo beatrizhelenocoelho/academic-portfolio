@@ -1,0 +1,8 @@
+agreement,n_blocks,percentage
+no_speech,16,33.33
+speech_only,16,33.33
+low_conflict,7,14.58
+high,4,8.33
+unknown_both,3,6.25
+medium_related,1,2.08
+ocr_only,1,2.08

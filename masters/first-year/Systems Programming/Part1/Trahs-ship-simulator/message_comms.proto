@@ -1,0 +1,47 @@
+// https://protobuf.dev/programming-guides/proto3/
+
+syntax = "proto2";
+
+enum Direction_enum{
+  UP = 0;
+  DOWN = 1;
+  LEFT = 2;
+  RIGHT = 3;
+
+}
+
+enum MoveResult {
+  OK = 0;
+  WALL = 1;
+}
+
+enum ConnectionResult{
+  CONN_OK = 0;
+  CONN_ERROR = 1;
+
+}
+
+
+
+message client_movement_req{
+  optional string type = 1 [default = "MOVE"];
+  required bytes ch = 2;
+  required int32 pass = 3;
+  required Direction_enum dir = 4;
+}
+
+
+message client_connection_req{
+   optional string type = 1 [default = "HELLO"];
+}
+
+
+message server_movement_req {
+  required MoveResult result = 1;
+}
+
+message server_connection_req{
+  required ConnectionResult result = 1;
+  required bytes name = 2;
+  required int32 pass = 3;
+}

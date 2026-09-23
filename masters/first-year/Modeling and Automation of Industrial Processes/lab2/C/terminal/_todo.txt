@@ -1,0 +1,19 @@
+
+Keyboard:
+- lights indicating columns powered
+- lights indicating rows powered
+
+Oscilloscope / Logic Analyzer:
+- kind of Simulink scope
+	https://www.mathworks.com/discovery/logic-analyzer.html
+- select bits to show
+- select buffered time (save in memory the events)
+- freeze button
+- allow Zoom
+
+Convert myterminal5.m to a classdef:
+- this would avoid mistakes in "op" names
+	(i.e. doing object.op(...) instead of object('op', ...))
+- problem, very hard to make a single file
+	(classdef cannot appear late, must be 1st in .m file)
+- maybe two files work ok, object file and classdef file

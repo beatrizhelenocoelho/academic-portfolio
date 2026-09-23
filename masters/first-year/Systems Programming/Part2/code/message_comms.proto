@@ -1,0 +1,100 @@
+// https://protobuf.dev/programming-guides/proto3/
+
+syntax = "proto2";
+
+enum Direction_enum{
+  UP = 0;
+  DOWN = 1;
+  LEFT = 2;
+  RIGHT = 3;
+
+}
+
+enum MoveResult {
+  OK = 0;
+  WALL = 1;
+}
+
+enum ConnectionResult{
+  CONN_OK = 0;
+  CONN_ERROR = 1;
+
+}
+
+message Color {
+  required uint32 r = 1;
+  required uint32 g = 2;
+  required uint32 b = 3;
+  required uint32 a = 4;
+}
+
+// =====================================
+// WORLD OBJECTS
+// =====================================
+
+message Planet {
+  required string name = 1;
+  required int32 x = 2;
+  required int32 y = 3;
+  required int32 trash = 4;
+  required int32 mass = 5;
+  required Color color = 6;
+}
+
+message Trash {
+  required int32 x = 1;
+  required int32 y = 2;
+  required int32 mass = 3;
+  required Color color = 4;
+  required int32 taken = 5;      //  0 roaming, 1  on ship, 2 recicled
+  optional string ship_name = 6;
+}
+
+message Ship {
+  required float x = 1;
+  required float y = 2;
+  required string name = 3;
+  required int32 use = 5;           //1 if using 0 if not
+  required int32 trash = 6;
+}
+
+// =====================================
+// WORLD SNAPSHOT (SERVER → CLIENT)
+// =====================================
+
+message WorldState {
+     required int32 seq = 1;
+  repeated Planet planets = 2;
+  repeated Trash trash = 3;
+  repeated Ship ships = 4;
+}
+
+
+
+message client_movement_req{
+  optional string type = 1 [default = "MOVE"];
+  required bytes ch = 2;
+  required int32 pass = 3;
+  required Direction_enum dir = 4;
+}
+
+
+message client_connection_req{
+   optional string type = 1 [default = "HELLO"];
+  }
+
+message client_exit_req{
+   optional string type = 1 [default = "EXIT"];
+   required bytes ch = 2;
+   required int32 pass = 3;
+}
+
+message server_movement_req {
+  required MoveResult result = 1;
+}
+
+message server_connection_req{
+  required ConnectionResult result = 1;
+  required bytes name = 2;
+  required int32 pass = 3;
+}

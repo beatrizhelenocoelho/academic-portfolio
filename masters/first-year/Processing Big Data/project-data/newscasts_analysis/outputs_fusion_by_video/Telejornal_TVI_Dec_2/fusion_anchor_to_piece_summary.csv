@@ -1,0 +1,5 @@
+anchor_candidate_status,n_blocks,percentage
+not_detected_by_ocr,87,81.31
+late_body_ocr_change,10,9.35
+weak_candidate_no_persistence,7,6.54
+candidate_detected,3,2.8
