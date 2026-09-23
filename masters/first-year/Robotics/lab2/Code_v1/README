@@ -1,0 +1,19 @@
+## Uploading to the Arduino UNO
+
+1.  **Install PlatformIO**: Ensure you have the PlatformIO extension installed in VS Code.
+2.  **Project Structure**: 
+    * Save the `platformio.ini` file in your project's root directory.
+    * Save `main.cpp` inside the `src/` folder.
+3.  **Connect & Upload**:
+    * Connect your Arduino Uno via USB.
+    * Click the **Upload** button (right-facing arrow icon) in the PlatformIO toolbar.
+
+## Operation
+
+* **Limit Calibration**: Upon reset, the motor moves until it triggers both limit switches to determine the center point.
+* **IMU Calibration**: The system waits 2 seconds, then provides a 5-second window to perform a figure-8 motion for magnetometer calibration.
+* **Tilt Control**: 
+    * Tilting the IMU calculates the pitch.
+    * A deadzone of 10 degrees is applied for stability.
+    * Motor speed increases as the tilt angle increases.
+    * Hitting a push button activates a roll back action.
